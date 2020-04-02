@@ -1,0 +1,78 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:               Chihuahua_01.jpg  label:                  chihuahua
+ 2 key:               Coffee_mug_1.jpg  label:                 coffee mug
+ 3 key:               Chihuahua_02.jpg  label:                  chihuahua
+ 4 key:                     Cat_01.jpg  label:                        cat
+
+     MATCH:
+
+              Chihuahua_01.jpg: 
+Real:                  chihuahua   Classifier:                      chihuahua
+
+              Coffee_mug_1.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:      siamese cat, siamese, cat
+
+ NOT A MATCH:
+
+              Chihuahua_02.jpg: 
+Real:                  chihuahua   Classifier:               japanese spaniel
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+     MATCH:
+
+              Chihuahua_01.jpg: 
+Real:                  chihuahua   Classifier:                      chihuahua  
+PetLabelDog: 1  ClassLabelDog: 1
+
+              Coffee_mug_1.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:      siamese cat, siamese, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+              Chihuahua_02.jpg: 
+Real:                  chihuahua   Classifier:               japanese spaniel  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+Stats dictionary:
+ {'n_images': 4, 'n_dogs_img': 2, 'n_notdogs_img': 2, 'n_match': 3, 'n_correct_dogs': 2, 'n_correct_notdogs': 2, 'n_correct_breed': 1, 'pct_match': 75.0, 'pct_correct_dogs': 100.0, 'pct_correct_breed': 50.0, 'pct_correct_notdogs': 100.0}
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+
+Results Summary for CNN Model VGG -----
+N Images            :   4
+N Dog Images        :   2
+N Non-Dog Images    :   2
+
+pct_match           : 75.00
+pct_correct_dogs    : 100.00
+pct_correct_breed   : 50.00
+pct_correct_notdogs : 100.00
+
+INCORRECT Breed Assignments:
+chihuahua was incorrectly classified as japanese spaniel
+
+Total elasped time: 0:0:3
